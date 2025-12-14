@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://afaqclub.netlify.app/sitemap.xml

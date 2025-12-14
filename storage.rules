@@ -1,0 +1,22 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Allow read of all media files
+    match /media/{allPaths=**} {
+      allow read: if true;
+      // Allow write if user is authenticated and approved in Firestore
+      allow write: if request.auth != null && isApproved(request.auth.uid);
+    }
+
+    // default deny
+    match /{allPaths=**} {
+      allow read: if false;
+      allow write: if false;
+    }
+
+    function isApproved(uid) {
+      return exists(/databases/$(database)/documents/users/$(uid)) && get(/databases/$(database)/documents/users/$(uid)).data.approved == true;
+    }
+  }
+}

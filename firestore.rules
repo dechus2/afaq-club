@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users collection: only server/admin should write user roles/approved (but users can create their own doc on signup)
+    match /users/{userId} {
+      allow create: if request.auth != null && request.auth.uid == userId; // user can create their doc during signup
+      allow read: if true; // public read of user meta (for admin UI)
+      // write only allowed to admin (via Cloud Function setting custom claim) or the user writing their own profile (excluding roles/approved)
+      allow update: if (
+        // admin via custom claim
+        (request.auth != null && request.auth.token.roles != null && (request.auth.token.roles.indexOf('admin') != -1 || request.auth.token.roles.indexOf('president') != -1))
+        ||
+        // user updating limited fields on own doc
+        (request.auth != null && request.auth.uid == userId && !("roles" in request.resource.data) && !("approved" in request.resource.data))
+      );
+    }
+
+    // Threads: public read, create only for authenticated + approved users
+    match /threads/{threadId} {
+      allow read: if true;
+      allow create: if request.auth != null && isApproved(request.auth.uid);
+      allow update, delete: if request.auth != null && resource.data.authorId == request.auth.uid;
+    }
+
+    // Media metadata: public read, create only for approved users
+    match /media/{mediaId} {
+      allow read: if true;
+      allow create: if request.auth != null && isApproved(request.auth.uid);
+      allow update, delete: if request.auth != null && resource.data.uploaderId == request.auth.uid;
+    }
+
+    // Decisions: reading allowed, creating only for approved users with president role
+    match /decisions/{docId} {
+      allow read: if true;
+      allow create: if request.auth != null && isApproved(request.auth.uid) && hasRole(request.auth.uid, 'president');
+      allow update, delete: if false;
+    }
+
+    function isApproved(uid) {
+      return exists(/databases/$(database)/documents/users/$(uid)) && get(/databases/$(database)/documents/users/$(uid)).data.approved == true;
+    }
+
+    function hasRole(uid, role) {
+      return exists(/databases/$(database)/documents/users/$(uid)) && (get(/databases/$(database)/documents/users/$(uid)).data.roles != null) && (get(/databases/$(database)/documents/users/$(uid)).data.roles.hasAny([role]));
+    }
+  }
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع نادي آفاق - نعمل لغد افضل">
+    <title>نادي آفاق - AFAQ Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+</head>
+<body>
+    <script src="/assets/load-layout.js"></script>
+    <!-- شريط التنقل العلوي -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="شعار نادي آفاق" id="club-logo">
+                    <div class="logo-text">
+                        <h1>نادي <span class="highlight">آفاق</span></h1>
+                        <p>AFAQ Club</p>
+                    </div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="pages/organizational-structure.html"><i class="fas fa-sitemap"></i> الهيكل التنظيمي</a></li>
+                    <li><a href="pages/departments.html"><i class="fas fa-building"></i> الأقسام والإدارات</a></li>
+                    <li><a href="pages/policies.html"><i class="fas fa-file-contract"></i> السياسات العامة</a></li>
+                    <li><a href="pages/decisions.html"><i class="fas fa-gavel"></i> القرارات الرسمية</a></li>
+                    <li><a href="pages/activities.html"><i class="fas fa-calendar-alt"></i> الفعاليات</a></li>
+                    <li><a href="pages/media.html"><i class="fas fa-photo-video"></i> المركز الإعلامي</a></li>
+                    <li><a href="pages/forum.html"><i class="fas fa-comments"></i> المنتدى</a></li>
+                    <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+                
+                <div class="auth-buttons">
+                    <a href="pages/login.html" id="login-btn" class="btn-secondary">تسجيل الدخول</a>
+                    <a href="#" id="logout-btn" class="btn-secondary" style="display:none;">تسجيل الخروج</a>
+                </div>
+
+                <div class="burger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- قسم البطل الرئيسي -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>نادي <span class="highlight">آفاق</span> .. نحو آفاقٍ لا حدود لها</h2>
+                <p class="hero-subtitle">منظومة شبابية مستقلة تمتلك قرارها، إدارتها، وأصولها</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>200+</h3>
+                            <p>عضو نشط</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h3>50+</h3>
+                            <p>فعالية سنوياً</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <h3>15+</h3>
+                            <p>إنجاز محلي ودولي</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#about" class="btn-primary">تعرف على النادي <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- عن النادي -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>من نحن</h2>
+                <p>بيت خبرة شبابي عالي الكفاءة</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>رؤيتنا ورسالتنا</h3>
+                    <p>نادي "آفاق" منظومة شبابية مستقلة تمتلك قرارها، إدارتها، وأصولها، وتُمارس عملياتها تحت هوية موحدة. يهدف النادي إلى بناء بيت خبرة شبابي عالي الكفاءة يعمل عبر أربعة قطاعات إنتاجية رئيسية.</p>
+                    
+                    <div class="vision-cards">
+                        <div class="vision-card">
+                            <i class="fas fa-chess-queen"></i>
+                            <h4>قطاع التنافسية</h4>
+                            <p>تمثيل النادي في المنافسات المحلية والدولية، الهاكاثونات، والفعاليات المهنية</p>
+                        </div>
+                        <div class="vision-card">
+                            <i class="fas fa-brain"></i>
+                            <h4>قطاع الإنتاج المعرفي</h4>
+                            <p>صناعة المحتوى، الإعلام الرقمي، البودكاست، التدوين، والمشاريع الإبداعية</p>
+                        </div>
+                        <div class="vision-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>قطاع التطوير المهني</h4>
+                            <p>تطوير مهارات القيادة، التخطيط، التحليل، وبناء القدرات عبر برامج تدريبية وورش عمل</p>
+                        </div>
+                        <div class="vision-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>قطاع جودة الحياة</h4>
+                            <p>تفعيل المجتمع الداخلي، تنظيم فعاليات نوعية، وبناء بيئة اجتماعية متماسكة ومحفزة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-leadership">
+                    <h3>المجلس الرئاسي</h3>
+                    <div class="leaders-grid">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h4>رئيس النادي</h4>
+                            <p class="leader-name">حسين عبدالله آل مانع</p>
+                            <p class="leader-role">الإشراف الكامل على الكيان واتخاذ القرارات العليا</p>
+                        </div>
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4>نائب الرئيس</h4>
+                            <p class="leader-name">نضال جميل سندي</p>
+                            <p class="leader-role">قيادة وإدارة فرع البنين وتنفيذ القرارات العليا</p>
+                        </div>
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4>نائبة الرئيس</h4>
+                            <p class="leader-name">دنا فيصل الغامدي</p>
+                            <p class="leader-role">قيادة وإدارة فرع البنات وتنفيذ القرارات العليا</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الأقسام الرئيسية -->
+        <section class="departments-preview">
+            <div class="section-header">
+                <h2>أقسام النادي</h2>
+                <p>مجالات متخصصة متنوعة</p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="dept-card cultural">
+                    <div class="dept-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>القسم الثقافي والفني</h3>
+                    <p>يشمل الفنون البصرية، المسرح، التصميم، الأدب، الإعلام، والفكر والحوار</p>
+                    <a href="pages/departments.html#cultural" class="btn-secondary">استكشاف القسم</a>
+                </div>
+                
+                <div class="dept-card scientific">
+                    <div class="dept-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>القسم العلمي</h3>
+                    <p>يشمل العلوم التطبيقية، التقنية والهندسة، الرياضيات، الطاقة والبيئة</p>
+                    <a href="pages/departments.html#scientific" class="btn-secondary">استكشاف القسم</a>
+                </div>
+                
+                <div class="dept-card islamic">
+                    <div class="dept-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>القسم الإسلامي</h3>
+                    <p>مغلق حاليًا</p>
+                    <span class="btn-disabled">مغلق مؤقتًا</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- الإدارات الرئيسية -->
+        <section class="administrations-section">
+            <div class="section-header">
+                <h2>الإدارات التنفيذية</h2>
+                <p>العقل المدبر للنادي</p>
+            </div>
+            
+            <div class="admin-cards">
+                <div class="admin-card engine">
+                    <div class="admin-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>إدارة الإشراف والتطوير <span class="admin-subtitle">(The Engine)</span></h3>
+                    </div>
+                    <p>العقل المدبر والمحرك التشغيلي للنادي. مسؤولة عن تحويل رؤية المجلس الرئاسي إلى واقع ملموس.</p>
+                    <ul class="admin-units">
+                        <li><i class="fas fa-map"></i> وحدة التخطيط العام</li>
+                        <li><i class="fas fa-calendar-alt"></i> وحدة الأنشطة والفعاليات</li>
+                        <li><i class="fas fa-play-circle"></i> وحدة التشغيل العام</li>
+                        <li><i class="fas fa-chart-line"></i> وحدة التقييم والجودة</li>
+                        <li><i class="fas fa-comments"></i> وحدة المقترحات والشكاوى</li>
+                    </ul>
+                </div>
+                
+                <div class="admin-card pulse">
+                    <div class="admin-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>إدارة الموارد البشرية <span class="admin-subtitle">(The Pulse)</span></h3>
+                    </div>
+                    <p>حفظ الحقوق وبناء الإنسان. معنية بالعنصر البشري من لحظة دخوله وحماية حقوقه في النادي.</p>
+                    <ul class="admin-units">
+                        <li><i class="fas fa-user-check"></i> وحدة المقابلات والفرز</li>
+                        <li><i class="fas fa-balance-scale"></i> وحدة الضبط والسلوك</li>
+                        <li><i class="fas fa-star"></i> وحدة الموهوبين</li>
+                        <li><i class="fas fa-medal"></i> وحدة الترقيات</li>
+                    </ul>
+                </div>
+                
+                <div class="admin-card backbone">
+                    <div class="admin-header">
+                        <i class="fas fa-server"></i>
+                        <h3>الإدارة التقنية <span class="admin-subtitle">(The Backbone)</span></h3>
+                    </div>
+                    <p>البنية التحتية الرقمية. توفر الأرضية الصلبة التي يقف عليها النادي في الفضاء الرقمي.</p>
+                    <ul class="admin-units">
+                        <li><i class="fas fa-link"></i> وحدة التنسيق العام</li>
+                        <li><i class="fab fa-discord"></i> وحدة الديسكورد</li>
+                        <li><i class="fas fa-globe"></i> وحدة الموقع الإلكتروني</li>
+                        <li><i class="fas fa-wpforms"></i> وحدة النماذج الإلكترونية</li>
+                        <li><i class="fas fa-database"></i> وحدة قواعد البيانات</li>
+                    </ul>
+                </div>
+                
+                <div class="admin-card voice">
+                    <div class="admin-header">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>إدارة الإعلام <span class="admin-subtitle">(The Voice)</span></h3>
+                    </div>
+                    <p>الصورة والسمعة. مسؤولة عن تغليف جهود النادي وتصديرها بأبهى صورة.</p>
+                    <ul class="admin-units">
+                        <li><i class="fas fa-eye"></i> وحدة الهوية البصرية</li>
+                        <li><i class="fas fa-ad"></i> وحدة الإعلانات</li>
+                        <li><i class="fas fa-video"></i> وحدة التوثيق المرئي</li>
+                        <li><i class="fas fa-share-alt"></i> وحدة حسابات التواصل</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- القيم الأساسية -->
+        <section class="values-section">
+            <div class="section-header">
+                <h2>قيمنا الأساسية</h2>
+                <p>أسس عملنا ومبادئنا</p>
+            </div>
+            
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-icon professional">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>الاحترافية</h3>
+                    <p>معيار تشكيل الفرق قائم على الكفاءة المهنية فقط</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon innovation">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>الابتكار</h3>
+                    <p>القدرة على اقتراح حلول، معالجة الثغرات، وتحمل المسؤولية</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon transparency">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>الشفافية</h3>
+                    <p>القرارات الإدارية مبنية على معايير واضحة ويُعلن عنها للأعضاء</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon commitment">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>الالتزام</h3>
+                    <p>حضور الاجتماعات، الرد على التكليفات، والالتزام بالمهل الزمنية</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon teamwork">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>روح الفريق</h3>
+                    <p>يعمل جميع الأعضاء والإدارات كجسم واحد تحت إدارة مركزية</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="شعار نادي آفاق">
+                    <div>
+                        <h3>نادي <span class="highlight">آفاق</span></h3>
+                        <p>AFAQ Club</p>
+                    </div>
+                </div>
+                <p class="footer-description">منظومة شبابية مستقلة تمتلك قرارها، إدارتها، وأصولها، وتُمارس عملياتها تحت هوية موحدة</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="pages/organizational-structure.html"><i class="fas fa-chevron-left"></i> الهيكل التنظيمي</a></li>
+                    <li><a href="pages/departments.html"><i class="fas fa-chevron-left"></i> الأقسام والإدارات</a></li>
+                    <li><a href="pages/policies.html"><i class="fas fa-chevron-left"></i> السياسات العامة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>المجلس الرئاسي</h4>
+                <ul class="footer-leaders">
+                    <li><i class="fas fa-user-tie"></i> حسين عبدالله آل مانع - رئيس النادي</li>
+                    <li><i class="fas fa-user-tie"></i> نضال جميل سندي - نائب الرئيس</li>
+                    <li><i class="fas fa-user-tie"></i> دنا فيصل الغامدي - نائبة الرئيس</li>
+                    <li><i class="fas fa-user-tie"></i> رويد عدنان مقلان - المعقب الرئاسي</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>اتصل بنا</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@afaqclub.com</p>
+                    <p><i class="fab fa-discord"></i> Discord: AFAQ Club</p>
+                    <p><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2023 نادي آفاق (AFAQ Club). جميع الحقوق محفوظة.</p>
+            <p>السياسات العامة المعتمدة بتاريخ 12/12/2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+    <script src="assets/supabase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
